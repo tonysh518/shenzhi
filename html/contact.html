@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sound Concepts | 声智音响设备</title>
+    <meta charset="utf-8">
+    <meta name = "format-detection" content = "telephone=no" />
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/camera.css">
+    <link rel="stylesheet" href="css/form.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.1.1.js"></script>
+    <script src="js/superfish.js"></script>
+    <script src="js/jquery.ui.totop.js"></script>
+    <script src="js/jquery.equalheights.js"></script>
+    <script src="js/jquery.mobilemenu.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/camera.js"></script>
+    <!--[if (gt IE 9)|!(IE)]><!-->
+    <script src="js/jquery.mobile.customized.min.js"></script>
+    <!--<![endif]-->
+    <script>
+        $(document).ready(function(){
+            jQuery('#camera_wrap').camera({
+                loader: false,
+                pagination: false ,
+                thumbnails: false,
+                height: '34.01041666666667%',
+                minHeight: '300',
+                caption: true,
+                navigation: true,
+                fx: 'mosaic'
+            });
+        });
+
+
+        $(document).ready(function(){
+            $().UItoTop({ easingType: 'easeOutQuart' });
+        });
+
+
+
+    </script>
+    <!--[if lt IE 8]>
+    <div style=' clear: both; text-align:center; position: relative;'>
+        <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+            <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+        </a>
+    </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <link rel="stylesheet" media="screen" href="css/ie.css">
+
+
+    <![endif]-->
+</head>
+
+<body class="page1" id="top">
+<header>
+
+    <!--==============================header=================================-->
+    <div class="container_12">
+        <div class="grid_12">
+
+            <h1>
+                <a href="index.html">
+                    <img src="img/logo.png">
+                </a>
+            </h1>
+
+            <div class="menu_block">
+                <nav class="horizontal-nav full-width horizontalNav-notprocessed">
+                    <ul class="sf-menu">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="about.html">公司概括</a><ul>
+                            <li><a href="about.html">公司简介</a></li>
+                            <li><a href="about2.html">创始人简介</a></li>
+                        </ul></li>
+                        <li><a href="product.html">产品资料</a>
+                            <ul>
+                                <li><a href="product.html">高级音响系统</a></li>
+                                <li><a href="product2.html">智能家庭系统</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="service.html">服务范围</a></li>
+                        <li class="current "><a href="contact.html">联系方式</a></li>
+                        <li><a href="showcase.html">成功项目</a></li>
+                    </ul>
+                </nav>
+
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div></div>
+    </div>
+
+    <div class="clear"></div>
+
+    </div>
+
+
+
+</header>
+<!--==============================Content=================================-->
+<div class="content">
+
+    <div class="container_12">
+        <div class="grid_12">
+            <h3><img src="./img/title_contact1.png" /></h3>
+            <div class="map">
+                <figure class="grid_7 alpha">
+                    <div id="googlemap" style="width:540px;height:300px;"></div>
+                </figure>
+                <div class="grid_5 omega">
+                    <address>
+                        <dl>
+                            <dt class="col1">上海市中山北路1777号飞洲时代大厦1005室</dt>
+                            <dd><span>Telephone:</span>8621-52393631</dd>
+                            <dd><span>FAX:</span>8621-32569721</dd>
+                            <dd>E-mail: <strong class="col2"><a class="link-1" href="#">mail@shengzhi.com</a></strong></dd>
+                        </dl>
+                    </address>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--==============================footer=================================-->
+<footer>
+    <div class="container_12">
+        <div class="grid_4 fright">
+            <p><i class=" icon-home"></i>上海市中山北路1777号飞洲时代大厦1005室 </p>
+            <p><i class=" icon-phone"></i>8621-52393631</p>
+            <p><i class=" icon-file-text"></i>8621-32569721</p>
+            <p class="mb0"><i class=" icon-envelope"></i><a href="mailto:mail@shengzhi.com">mail@shengzhi.com</a></p>
+        </div>
+        <div class="grid_6">
+            <div class="copy">
+                &copy; 2013 | 声智音响设备（上海）有限公司
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+<script>
+    var styles = [
+        {
+            stylers: [
+                { hue: "#000" },
+                { saturation: -100 },
+                { gamma:0 }
+            ]
+        },{
+            featureType: "road",
+            elementType: "geometry",
+            stylers: [
+                { lightness: 0 },
+                { visibility: "simplified" }
+            ]
+        },{
+            featureType: "road",
+            elementType: "labels",
+            stylers: [
+                { visibility: "on" }
+            ]
+        }
+    ];
+
+    // Create a new StyledMapType object, passing it the array of styles,
+    // as well as the name to be displayed on the map type control.
+    var styledMap = new google.maps.StyledMapType(styles,
+            {name: "Styled Map"});
+    var point = new google.maps.LatLng(31.250979,121.433316);
+    // Create a map object, and include the MapTypeId to add
+    // to the map type control.
+    var mapOptions = {
+        zoom: 17,
+        center: new google.maps.LatLng(31.250979,121.433316),
+        mapTypeControlOptions: {
+            mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+        },
+        scrollwheel: false
+    };
+
+    infowindow = new google.maps.InfoWindow();
+    geocoder = new google.maps.Geocoder();
+    map = new google.maps.Map(document.getElementById('googlemap'),
+            mapOptions);
+
+    //Associate the styled map with the MapTypeId and set it to display.
+    map.mapTypes.set('map_style', styledMap);
+    map.setMapTypeId('map_style');
+
+    var marker = new google.maps.Marker({
+        position: point,
+        map: map,
+        title: '声智'
+    });
+</script>
+</body>
+</html>

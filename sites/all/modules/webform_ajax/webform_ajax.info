@@ -1,0 +1,8 @@
+name = Webform ajax submit
+description = Webform ajax submit
+package = Webform ajax submit
+core = 7.x
+version = 0.0.1beta
+
+; Module Dependencies
+dependencies[] = webform

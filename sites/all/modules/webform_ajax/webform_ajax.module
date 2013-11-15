@@ -1,0 +1,83 @@
+<?php 
+
+/**
+ * Implements hook_menu().
+ */
+function webform_ajax_menu() {
+	return array(
+		'webform_ajax' => array(
+			'page callback' => 'webform_ajax_submit',
+			'access callback' => TRUE,
+		),
+		'webform_ajax2' => array(
+			'page callback' => 'newsletter_submit',
+			'access callback' => TRUE,
+		),
+	);
+}
+
+/**
+ * Menu callback.
+ */
+function webform_ajax_submit() {
+ $node = node_load(288);
+  global $user;
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $tel = $_POST['telephone'];
+  $message = $_POST['message'];
+  $data = array(
+    1 => array('0' => $name),
+    2 => array('0' => $tel),
+    3 => array('0' => $email),
+    4 => array('0' => $message),
+  );
+
+  $submission = (object) array(
+    'nid' => $node->nid,
+    'uid' => $user->uid,
+    'submitted' => REQUEST_TIME,
+    'remote_addr' => ip_address(),
+    'is_draft' => FALSE,
+    'data' => $data,
+  );
+
+  module_load_include('inc', 'webform', 'includes/webform.submissions');
+  $sid = webform_submission_insert($node, $submission);
+  webform_submission_send_mail($node, $submission);
+  print json_encode(array('sid' => $sid));
+  die();
+}
+
+
+
+
+
+
+
+function newsletter_submit() {
+ $node = node_load(289);
+  global $user;
+  $email = $_POST['email'];
+  $data = array(
+    1 => array('0' => $email),
+  );
+
+  $submission = (object) array(
+    'nid' => $node->nid,
+    'uid' => $user->uid,
+    'submitted' => REQUEST_TIME,
+    'remote_addr' => ip_address(),
+    'is_draft' => FALSE,
+    'data' => $data,
+  );
+
+  module_load_include('inc', 'webform', 'includes/webform.submissions');
+  $sid = webform_submission_insert($node, $submission);
+  webform_submission_send_mail($node, $submission);
+  print json_encode(array('sid' => $sid));
+  die();
+}
+
+
+?>
